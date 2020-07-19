@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Homework1</title>
+</head>
+<body>
+	<script type="text/javascript" class="task1">
+		let a = 1, b = 1, c, d;
+		c = ++a; alert(c);           // 2	- сначала увеличиваем a на 1: a=1+1, затем присваиваем: c = a = 2
+		d = b++; alert(d);           // 1	- сначала присваиваем: d = b = 1, затем увеличиваем b на 1: b=1+1=2
+		c = (2+ ++a); alert(c);      // 5	- с = 2 + (1 + a)= 2+2+1=5; a = 2+1 = 3
+		d = (2+ b++); alert(d);      // 4	- d = 2+2 = 4; b = 2+1 = 3
+		alert(a);                    // 3	- a = 2+1 = 3
+		alert(b);                    // 3	- b = 2+1 = 3
+	</script>
+	<script type="text/javascript" class="task2">
+		a = 2;
+		let x = 1 + (a *= 2);       // x = 1+(a=a*2) = 1 + (2*2) = 1+4 = 5
+		console.log(x)
+	</script>
+
+	<script type="text/javascript" class="task3">
+		a = Math.round(Math.random()*20-10);
+		b = Math.round(Math.random()*20-10);
+		switch(true) {
+			case (a>=0 && b>=0):
+			alert("a = " + a + "; b = " + b + ". Разность между a и b равна " + Math.abs(a-b));
+			break;
+			case (a<0 && b<0):
+			alert("a = " + a + "; b = " + b + ". Произведение между a и b равно " + (a*b));
+			break;
+			default:
+			alert("a = " + a + "; b = " + b + ". Сумма между a и b равна " + (a+b));
+			break;
+		}
+	</script>
+	
+	<script type="text/javascript" class="task4">
+		a = Math.round(Math.random()*15);
+		alert("a = " + a + ". Выводим числа от " + a + " до 15.");
+		switch(true) {
+			case (a===0):
+			++a; alert(a);
+			case (a===1):
+			++a; alert(a);
+			case (a===2):
+			++a; alert(a);
+			case (a===3):
+			++a; alert(a);
+			case (a===4):
+			++a; alert(a);
+			case (a===5):
+			++a; alert(a);
+			case (a===6):
+			++a; alert(a);
+			case (a===7):
+			++a; alert(a);
+			case (a===8):
+			++a; alert(a);
+			case (a===9):
+			++a; alert(a);
+			case (a===10):
+			++a; alert(a);
+			case (a===11):
+			++a; alert(a);
+			case (a===12):
+			++a; alert(a);
+			case (a===13):
+			++a; alert(a);
+			case (a===14):
+			++a; alert(a);
+		}
+	</script>
+
+	<script type="text/javascript" class="task5">
+		a = Math.round(Math.random()*20)-10;
+		b = Math.round(Math.random()*20)-10;
+
+		function plus(a,b) {
+			return(a+b);
+		}
+		alert("a = " + a + "; b = " + b + ". a + b = " + plus(a,b));
+
+		function minus(a,b) {
+			return(a-b);
+		}
+		alert("a = " + a + "; b = " + b + ". a - b = " + minus(a,b));
+
+		function divide(a,b) {
+			return(a/b);
+		}
+		alert("a = " + a + "; b = " + b + ". a / b = " + divide(a,b));
+
+		function multiply(a,b) {
+			return(a*b);
+		}
+		alert("a = " + a + "; b = " + b + ". a * b = " + multiply(a,b));
+	</script>
+
+	<script type="text/javascript" class="task6">
+		let	arg1 = parseInt(prompt("Введите первый аргумент (a)"),10);
+		let	arg2 = parseInt(prompt("Введите второй аргумент (b)"),10);
+		let	operation = prompt("Введите название арифметической операции: разность, произведение или сумма");
+
+		function mathOperation(arg1, arg2, operation) {
+			switch(true) {
+				case (operation==="разность"):
+				return(arg1-arg2);
+				break;
+				case (operation==="произведение"):
+				return(arg1*arg2);
+				break;
+				case (operation==="сумма"):
+				return(arg1+arg2);
+				break;
+			}
+		}
+
+		alert("a = " + arg1 + "; b = " + arg2 + ". " + operation + " = " + mathOperation(arg1, arg2, operation));
+	</script>
+<!-- 7) *Сравнить null и 0. Попробуйте объяснить результат.
+	При попытке сравнить  null и 0 результат сравнения false, т.к. это разные типы данных -->
+	<script type="text/javascript" class="task8">
+		let	val = parseInt(prompt("Введите число (a)"),10);
+		let	pow = parseInt(prompt("Введите степень числа (b)"),10);
+
+		function power(val, pow) {
+			if(pow==1) {
+				return(val);
+			} else {
+				return(val)*power(val, pow-1)
+			}
+		}
+		alert("число a = " + val + "; степень b = " + pow + ". a^b=" + power(val, pow));
+	</script>
+
+</body>
+</html>
